@@ -1,4 +1,39 @@
-let val;
+
+// document.querySelector('.clear-tasks').addEventListener('click',
+// function(e){
+//     console.log('hello world');
+    
+// });
+
+document.querySelector('.clear-tasks').addEventListener('click',onClick);
+
+function onClick(e){
+    let val;
+    val =e;
+    //Event target element
+    val = e.target;
+    val = e.target.id;
+    val = e.target.className;
+    val = e.target.classList;
+
+    //e.target.innerText = 'hi';
+
+    //event type
+    val = e.type;
+
+    //timestamp
+    val = e.timeStamp;
+
+    //coords event relative to window
+    val = e.clientY; 
+    val = e.clientX;
+
+    //coords event relative to element
+    val = e.offsetY; 
+    val = e.offsetX; 
+
+    console.log(val);
+}
 
 // val = document.scripts[0].getAttribute('src');
 
@@ -85,47 +120,46 @@ let val;
 
 //create element
 
-const newHeading = document.createElement('h4');
-// add id
-newHeading.id ='task-title';
-//new text node
-newHeading.appendChild(document.createTextNode('Task list'));
-// get the old heading
-const oldHeading = document.getElementById('task-title');
-//parent
-const cardAction = document.querySelector('.card-action');
+// const newHeading = document.createElement('h4');
+// // add id
+// newHeading.id ='task-title';
+// //new text node
+// newHeading.appendChild(document.createTextNode('Task list'));
+// // get the old heading
+// const oldHeading = document.getElementById('task-title');
+// //parent
+// const cardAction = document.querySelector('.card-action');
 
-//replace
-cardAction.replaceChild(newHeading,oldHeading);
+// //replace
+// cardAction.replaceChild(newHeading,oldHeading);
 
-//remove element
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
+// //remove element
+// const lis = document.querySelectorAll('li');
+// const list = document.querySelector('ul');
 
-//remove list item
-//lis[0].remove();
+// //remove list item
+// //lis[0].remove();
 
-//remove child element
-//list.removeChild(lis[3]);
+// //remove child element
+// //list.removeChild(lis[3]);
 
-//classes attr
-const firstli = document.querySelector('li:first-child');
-const link = firstli.children[0].children[0];
+// //classes attr
+// const firstli = document.querySelector('li:first-child');
+// const link = firstli.children[0].children[0];
 
-//classes
-val = link.className;
-val = link.classList;
-val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
-val = link;
+// //classes
+// val = link.className;
+// val = link.classList;
+// val = link.classList[0];
+// link.classList.add('test');
+// link.classList.remove('test');
+// val = link;
 
-//attributes
-link.setAttribute('href','www.google.com');
-val = link.getAttribute('href');
-link.setAttribute('title','Google');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
+// //attributes
+// link.setAttribute('href','www.google.com');
+// val = link.getAttribute('href');
+// link.setAttribute('title','Google');
+// val = link.hasAttribute('title');
+// link.removeAttribute('title');
 
-console.log(val);
 
